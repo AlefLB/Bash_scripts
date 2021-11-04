@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+data="$( date +'%d/%m/%Y' )"
+
+header="#!/usr/bin/env bash
+#-------------------------------
+#Script   :
+#Descrição:
+#Autor    : Alef Lopes <aleflopesb8@gmail.com>
+#Versão   : 0.1
+#Data     : $data
+#Licença  : GNU/GPL v3.0
+#-------------------------------
+#Uso: 
+#-------------------------------
+"
+
+editor="nano"
+
+[[ $# -ne 1 ]] && echo "Digite apenas 1 argumento" && exit 1
+
+[[ -f $1 ]] && echo "Arquivo já existe" && exit 1
+
+echo "$header" > $1
+chmod +x $1
+$editor $1
