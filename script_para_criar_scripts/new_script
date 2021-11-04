@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#Como usar:
+#dentro da psata onde esta este script chame ./new_script <coloque aqui o nome do novo script>
+
+
 data="$( date +'%d/%m/%Y' )"
 
 header="#!/usr/bin/env bash
